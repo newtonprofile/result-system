@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>result system</title>
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+	
+	<input type="text">
+	<button>GO</button>
+
+	<hr>
+
+	<h1></h1>
+
+	<script src="assets/js/jquery-3.4.1.min.js"></script>
+	<script>
+		$('button').click(function(){
+
+			let res = $('input').val();
+
+			if( res >=0 && res <= 59){
+
+				$('h1').html('<span style="color:green;"> F </span>');
+			}
+			else if( res >= 60 && res <= 66){
+				$('h1').html('<span style="color:blue;"> D </span>');
+			}
+			else if( res >= 67 && res <= 69){
+				$('h1').html('<span style="color:yollew;"> D+ </span>');
+			}
+			else if( res >= 70 && res <= 72){
+				$('h1').html('<span style="color:blue;"> C- </span>');
+			}
+			else if( res >= 73 && res <= 76){
+				$('h1').html('<span style="color:blue;"> C </span>');
+			}
+			else if( res >= 77 && res <= 79){
+				$('h1').html('<span style="color:blue;"> C+ </span>');
+			}
+			else if( res >= 80 && res <= 83){
+				$('h1').html('<span style="color:blue;"> B- </span>');
+			}
+			else if( res >= 84 && res <= 86){
+				$('h1').html('<span style="color:blue;"> B </span>');
+			}
+			else if( res >= 87 && res <= 89){
+				$('h1').html('<span style="color:blue;"> B+ </span>');
+			}
+			else if( res >= 90 && res <= 93){
+				$('h1').html('<span style="color:blue;"> A- </span>');
+			}
+			else if( res >= 94 && res <= 100){
+				$('h1').html('<span style="color:blue;"> D+ </span>');
+			}
+			else{
+				$('h1').html('<span style="color:blue;"> Out of system </span>');
+			}
+
+			$('input').val('');
+		});
+
+	</script>
+</body>
+</html>
